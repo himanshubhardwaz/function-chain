@@ -1,0 +1,42 @@
+export const functions = [
+  {
+    id: "funtion-1",
+    name: "Function 1",
+    inputValue: 2,
+    outputValue: 0,
+    equation: "x-2",
+    nextFunction: "function-2",
+  },
+  {
+    id: "funtion-2",
+    name: "Function 2",
+    inputValue: 2,
+    outputValue: 0,
+    equation: "x-2",
+    nextFunction: "function-3",
+  },
+  {
+    id: "funtion-3",
+    name: "Function 3",
+    inputValue: 2,
+    outputValue: 0,
+    equation: "x-2",
+    nextFunction: "function-4",
+  },
+  {
+    id: "funtion-4",
+    name: "Function 4",
+    inputValue: 2,
+    outputValue: 0,
+    equation: "x-2",
+    nextFunction: "function-5",
+  },
+  {
+    id: "funtion-5",
+    name: "Function 5",
+    inputValue: 2,
+    outputValue: 0,
+    equation: "x-2",
+    nextFunction: "output-function",
+  },
+];
