@@ -37,6 +37,6 @@ export const functions = [
     inputValue: 2,
     outputValue: 0,
     equation: "x-2",
-    nextFunction: "output-function",
+    nextFunction: "-",
   },
 ];

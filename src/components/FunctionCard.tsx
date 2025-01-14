@@ -1,19 +1,20 @@
+import { memo } from "react";
 import HolderIcon from "../assets/holder-icon.svg";
 
 export type FunctionCardProps = {
+  id: string;
   name: string;
-  inputValue: number;
-  outputValue: number;
   equation: string;
-  nextFunction: string | undefined;
+  nextFunction?: string;
+  editEquation: (functionId: string, equation: string) => void;
 };
 
 const FunctionCard = ({
   name,
-  // inputValue,
-  // outputValue,
-  equation,
   nextFunction,
+  equation,
+  editEquation,
+  id,
 }: FunctionCardProps) => {
   return (
     <div className="bg-white border border-gray-300 shadow-md rounded-[15px] w-72 p-4">
@@ -30,7 +31,7 @@ const FunctionCard = ({
           type="text"
           placeholder="x-2"
           value={equation}
-          defaultValue="x-2"
+          onChange={(e) => editEquation(id, e.target.value)}
           className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
       </div>
@@ -63,4 +64,4 @@ const FunctionCard = ({
   );
 };
 
-export default FunctionCard;
+export default memo(FunctionCard);
