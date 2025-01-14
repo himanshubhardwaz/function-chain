@@ -13,3 +13,21 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+select {
+    -webkit-appearance: none;
+    /* Removes the default Safari dropdown styling */
+    -moz-appearance: none;
+    /* For Firefox (optional) */
+    appearance: none;
+    /* Standard property */
+    background: url('data:image/svg+xml;base64,...') no-repeat right center;
+    /* Optional: add a custom dropdown icon */
+    background-size: 1em;
+    /* Adjust icon size */
+    border: 1px solid #ccc;
+    /* Add border for consistency */
+    border-radius: 4px;
+    padding-right: 2rem;
+    /* Make space for the dropdown icon */
+}

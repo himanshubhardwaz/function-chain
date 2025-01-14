@@ -1,6 +1,6 @@
 export const functions = [
   {
-    id: "funtion-1",
+    id: "function-1",
     name: "Function 1",
     inputValue: 2,
     outputValue: 0,
@@ -8,7 +8,7 @@ export const functions = [
     nextFunction: "function-2",
   },
   {
-    id: "funtion-2",
+    id: "function-2",
     name: "Function 2",
     inputValue: 2,
     outputValue: 0,
@@ -16,7 +16,7 @@ export const functions = [
     nextFunction: "function-3",
   },
   {
-    id: "funtion-3",
+    id: "function-3",
     name: "Function 3",
     inputValue: 2,
     outputValue: 0,
@@ -24,7 +24,7 @@ export const functions = [
     nextFunction: "function-4",
   },
   {
-    id: "funtion-4",
+    id: "function-4",
     name: "Function 4",
     inputValue: 2,
     outputValue: 0,
@@ -32,7 +32,7 @@ export const functions = [
     nextFunction: "function-5",
   },
   {
-    id: "funtion-5",
+    id: "function-5",
     name: "Function 5",
     inputValue: 2,
     outputValue: 0,
