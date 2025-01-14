@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const useConnectRefs = (refs: Array<React.RefObject<HTMLDivElement>>) => {
-  const [paths, setPaths] = useState([]);
+  const [paths, setPaths] = useState<string[]>([]);
 
   useEffect(() => {
     const calculatePaths = () => {
