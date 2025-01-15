@@ -51,7 +51,3 @@ pnpm preview
 ```
 
 The preview server will be available at `http://localhost:4173`.
-
-### Known Issues
-
-- There is a bug when scrolling through the app on small devices. The connected lines do not appear below the screen height, causing the UI to break
