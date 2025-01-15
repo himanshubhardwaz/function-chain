@@ -13,7 +13,7 @@ export const functions = [
     inputValue: 2,
     outputValue: 0,
     equation: "x-2",
-    nextFunction: "function-3",
+    nextFunction: "function-4",
   },
   {
     id: "function-3",
@@ -21,7 +21,7 @@ export const functions = [
     inputValue: 2,
     outputValue: 0,
     equation: "x-2",
-    nextFunction: "function-4",
+    nextFunction: "-",
   },
   {
     id: "function-4",
@@ -37,6 +37,6 @@ export const functions = [
     inputValue: 2,
     outputValue: 0,
     equation: "x-2",
-    nextFunction: "-",
+    nextFunction: "function-3",
   },
 ];

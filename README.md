@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# function-chain
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based project using Vite for development and TailwindCSS for styling.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with the project, follow the steps below:
 
-## Expanding the ESLint configuration
+### 1. Enable Corepack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before installing dependencies, ensure Corepack is enabled to use `pnpm`:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+corepack enable
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Install the required dependencies using `pnpm`:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+pnpm install
 ```
+
+### 3. Start Development Server
+
+Start the development server using `pnpm`:
+
+```bash
+pnpm dev
+```
+
+The development server will be available at `http://localhost:5173`.
+
+### 4. Build for Production
+
+Build the project for production using `pnpm`:
+
+```bash
+pnpm build
+```
+
+The built files will be available in the `dist` directory.
+
+### 5. Preview the Production Build
+
+Preview the production build using `pnpm`:
+
+```bash
+pnpm preview
+```
+
+The preview server will be available at `http://localhost:4173`.
+
+### Known Issues
+
+- There is a bug when scrolling through the app on small devices. The connected lines do not appear below the screen height, causing the UI to break

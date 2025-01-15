@@ -58,7 +58,7 @@ const FunctionCard = forwardRef<FunctionCardRef, FunctionCardProps>(
             value={nextFunction}
             disabled
           >
-            <option value="-">None</option>
+            <option value="-">-</option>
             {functions.map((fn) => (
               <option key={fn.id} value={fn.id}>
                 {fn.name}
