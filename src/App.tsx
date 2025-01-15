@@ -83,7 +83,7 @@ function App() {
         variant="input"
         ref={inputDotRef}
       />
-      <div className="flex flex-wrap justify-center items-center w-2/3 gap-8">
+      <div className="flex flex-wrap justify-center items-center max-w-5xl gap-8">
         {functions.map((fn, index) => (
           <FunctionCard
             key={fn.id}
