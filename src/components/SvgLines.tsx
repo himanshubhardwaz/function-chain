@@ -48,14 +48,13 @@ export const SvgLines = ({ paths }: { paths: string[] }) => {
         pointerEvents: "none", // So it doesn’t interfere with clicks or interactions
         overflow: "visible", // So that the svg is scrollable
       }}
-      // viewBox="0 0 100 100"
     >
       {paths.map((path, index) => (
         <path
           key={index}
           d={path}
           stroke="#0066FF4F"
-          strokeWidth="4"
+          strokeWidth="8"
           fill="none"
         />
       ))}
