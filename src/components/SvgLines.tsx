@@ -46,7 +46,9 @@ export const SvgLines = ({ paths }: { paths: string[] }) => {
         width: `${svgDimensions.width}px`, // Full document width
         height: `${svgDimensions.height}px`, // Full document height
         pointerEvents: "none", // So it doesn’t interfere with clicks or interactions
+        overflow: "visible", // So that the svg is scrollable
       }}
+      // viewBox="0 0 100 100"
     >
       {paths.map((path, index) => (
         <path
