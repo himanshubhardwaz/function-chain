@@ -3,6 +3,8 @@ import { FunctionCardRef } from "../components/FunctionCard";
 import { functions as data } from "../data";
 
 export function evaluateEquation(equation: string, value: number) {
+  equation = equation.replace(/\^/g, "**");
+
   const fn = new Function("x", `return ${equation};`);
   return fn(value);
 }

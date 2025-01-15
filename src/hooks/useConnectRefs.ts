@@ -4,8 +4,6 @@ const useConnectRefs = (refs: Array<React.RefObject<HTMLDivElement>>) => {
   const [paths, setPaths] = useState<string[]>([]);
 
   useEffect(() => {
-    let animationFrame: number;
-
     const calculatePaths = () => {
       const newPaths: string[] = [];
 
@@ -48,24 +46,15 @@ const useConnectRefs = (refs: Array<React.RefObject<HTMLDivElement>>) => {
       setPaths(newPaths);
     };
 
-    const handleScrollResize = () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-      animationFrame = requestAnimationFrame(calculatePaths);
-    };
-
     calculatePaths();
 
-    window.addEventListener("resize", handleScrollResize);
-    window.addEventListener("scroll", handleScrollResize);
+    // Recalculate paths on resize and scroll
+    window.addEventListener("resize", calculatePaths);
+    window.addEventListener("scroll", calculatePaths);
 
     return () => {
-      window.removeEventListener("resize", handleScrollResize);
-      window.removeEventListener("scroll", handleScrollResize);
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
+      window.removeEventListener("resize", calculatePaths);
+      window.removeEventListener("scroll", calculatePaths);
     };
   }, [refs]);
 

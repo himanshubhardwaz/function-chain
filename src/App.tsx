@@ -5,6 +5,7 @@ import { evaluateEquation, getOrderedFunctionRefs } from "./util";
 import useConnectRefs from "./hooks/useConnectRefs";
 
 import { functions as data } from "./data";
+import { SvgLines } from "./components/SvgLines";
 
 function App() {
   const [initialValue, setInitialValue] = useState("2");
@@ -94,26 +95,7 @@ function App() {
         ))}
       </div>
       <Input value={String(outputValue)} variant="output" ref={outputDotRef} />
-      <svg
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          pointerEvents: "none",
-        }}
-      >
-        {paths.map((path, index) => (
-          <path
-            key={index}
-            d={path}
-            stroke="#0066FF4F"
-            strokeWidth="8"
-            fill="none"
-          />
-        ))}
-      </svg>
+      <SvgLines paths={paths} />
     </main>
   );
 }
